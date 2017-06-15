@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="plugin/echo/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="plugin/echo/js/jquery.flipping_text.js"></script>
+        <script src="plugin/echo/js/modernizr.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <canvas id="q" style="z-index: 0;"></canvas>
+
+        <div style="background-color: rgba(0, 127, 127, 0.518);border-radius: 4px;width:80%;height: 400px;position: absolute;top:10%;left:10%;box-shadow: 0px 0px 12px rgba(0,255,255,0.5);border: 1px solid rgba(127,255,255,0.25);text-align: center;cursor: default;">
+            <div class="left_col" style="padding:10px;text-align: left;font-size: 20px;font-weight: bold;color: rgba(255,255,255,0.75);text-shadow: 0 0 10px rgba(0,255,255,0.95);">
+                <h3 class="intro">The society based on production</h3>
+                <h3 data-delay="3000" class="intro">is only productive, not creative</h3>
+                <h3 data-delay="3000" class="intro">is only productive, not creative</h3>
+                <h3 data-delay="3000" class="intro">is only productive, not creative</h3>
+            </div>
+        </div>
+
+        <script type="text/javascript" >
+            var s = window.screen;
+            var width = q.width = s.width;
+            var height = q.height = s.height;
+            var letters = Array(256).join(1).split('');
+            var draw = function () {
+                q.getContext('2d').fillStyle = 'rgba(0,0,0,.05)';
+                q.getContext('2d').fillRect(0, 0, width, height);
+                q.getContext('2d').fillStyle = '#7fffff';
+                letters.map(function (y_pos, index) {
+                    text = Math.random() > 0.5 ? 1 : 0;
+                    x_pos = index * 10;
+                    q.getContext('2d').fillText(text, x_pos, y_pos);
+                    letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
+                });
+            };
+            setInterval(draw, 33);
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".intro").flipping_text({
+                    tickerTime: 5
+
+                    //tickerCount: 5,
+                    //tickerTime: 100
+
+//                    tickerTime: 20,
+//                    tickerCount: 1,
+//                    customRandomChar: "!@#$%^&*"
+                });
+            });
+        </script>
+    </body>
+</html>
