@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HELLBAO'S BLOG</title>
-        <script src='js/prefixfree.min.js'></script>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src='plugin/login/js/prefixfree.min.js'></script>
+        <link rel="stylesheet" type="text/css" href="plugin/login/css/styles.css">
+        <link rel="stylesheet" href="plugin/form/css/fancyInput.css">
         <style type="text/css">
             .terminal {
                 width: 100%;
@@ -17,7 +18,6 @@
                 top: 40%;
                 left: auto;
             }
-
             .terminal::before {
                 content: "";
                 margin-right: 10px;
@@ -26,16 +26,10 @@
         </style>
     </head>
     <body>
-        <div id="logo"> 
-            <h1 class="hogo"><i>HELLBAO'S BLOG</i></h1>
-        </div> 
-        <div class="stark-login" style="z-index:6;position: absolute;left:50%;margin-left: -250px;">
+        <div class="stark-login" style="z-index:6;position: absolute;left:50%;margin-left: -300px;width: 600px;height: 500px;">
             <form action="" method="">	
                 <div id="fade-box">
-                    <div class="terminal"></div>
-                    <div class="form"><input  type="text" name="username" id="username" placeholder="Yourname">
-                        <input type="password" placeholder="Yourtel">
-                        <button >learn More</button></div>
+
                 </div>
             </form>
             <div class="hexagons">
@@ -104,22 +98,7 @@
                 <span>&#x2B22;</span>
             </div>      
         </div> 
-
-        <div id="circle1" style="z-index:4">
-            <div id="inner-cirlce1">
-                <h2> </h2>
-            </div>
-        </div>
         <canvas id="q" style="z-index: 0;"></canvas>
-        <!--    <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>-->
-
-
         <script type="text/javascript" >
             var s = window.screen;
             var width = q.width = s.width;
@@ -138,14 +117,15 @@
             };
             setInterval(draw, 33);
         </script>	
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="js/typewriting.min.js"></script>
+<!--        <script type="text/javascript" src="plugin/login/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="plugin/login/js/typewriting.min.js"></script>
+        
         <script type="text/javascript">
             $(document).ready(function () {
                 $('.terminal').css('display', 'block');
                 $('.form').css('display', 'none');
                 setTimeout(function () {
-                    $('.terminal').typewriting("Welcome To My Blog ", {
+                    $('.terminal').typewriting("Welcome To My Blog ✌", {
                         "typing_interval": 200,
                         "blink_interval": "6s",
                         "cursor_color": "#7FFFFF"
@@ -161,6 +141,6 @@
                     }, 6000);
                 }, 1000);
             });
-        </script>
+        </script>-->
     </body>
 </html>

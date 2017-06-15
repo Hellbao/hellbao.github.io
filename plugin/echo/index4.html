@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh" class="demo1 no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		
+		<!-- Edit Below -->
+		<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.flipping_text.js"></script>
+	    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	    <link rel="stylesheet" type="text/css" href="css/elusive-webfont.css" />
+	    <script src="js/modernizr.js"></script>
+	</head>
+	<body class="demo1">
+  
+	<div class="header">
+		<h1>jQuery Flipping Text: Custom Random Character</h1>
+		<div class="menu">
+	  		<a href="index.html">Demo 1</a>
+	  		<a href="index2.html">Demo 2</a>
+	  		<a href="index3.html">Demo 3</a>
+	  		<a class="active" href="index4.html">Demo 4</a>
+	  		<a href="index5.html">Demo 5</a>
+	  	</div>
+	</div>
+	
+	<div class="main">
+	    <div class="page_container">
+	      <h2 class="intro">The society based on production</h2>
+	      <h3 class="intro">is only productive, not creative</h3>
+	    </div>
+	</div>
+	<script type="text/javascript">
+	  $(document).ready( function() {
+	    $(".intro").flipping_text({
+	      tickerTime: 50,
+	      tickerCount: 5,
+        customRandomChar: "!@#$%^&*"
+	    });
+	  });
+  	</script>
+		
+	</body>
+</html>
