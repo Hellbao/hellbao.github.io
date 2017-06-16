@@ -23,53 +23,80 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 @keyframes cursor {
-	0%, 50% {
-		opacity: 1;
-	}
+    0%, 50% {
+        opacity: 1;
+    }
 
-	51%, 100% {
-		opacity: 0;
-	}
+    51%, 100% {
+        opacity: 0;
+    }
 }
 
 #terminal,
 .terminal{
-	background-color: #000;
-
-	color: #7fffff;
-	font-family: "Ubuntu Mono", mono;
-	font-size: 14px;
-	line-height: 125%;
-	text-align: left;
+    background-color: #000;
+    color: #7fffff;
+    font-family: "Ubuntu Mono", mono;
+    font-size: 14px;
+    line-height: 125%;
+    text-align: left;
 }
-
 #terminal .output,
 .terminal .output{
-	min-height: 320px;
-	max-height: 320px;
-
-	overflow: hidden;
+    min-height: 320px;
+    max-height: 320px;
+    overflow: hidden;
 }
 
 #terminal .output .line,
 .terminal .output .line{
-	display: block;
-	max-width: 1160px;
-	margin: 0 auto;
+    display: block;
+    max-width: 1160px;
+    margin: 0 auto;
 }
 
 #terminal .output .line:last-child::after,
 .terminal .output .line:last-child::after{
-	content: "|";
+    content: "|";
 
-	animation-name: cursor;
-	animation-iteration-count: infinite;
-	animation-duration: 1s;
-	animation-fill-mode: both;
+    animation-name: cursor;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
 
 #terminal [data-terminal],
 .terminal [data-terminal]{
-	display: none;
+    display: none;
+}
+.terminal-window{
+    max-width: 1000px;
+    margin: 1em auto;
+    box-shadow: 0 12px 24px rgba(0,0,0,.66);
+}
+
+.terminal-window::before{
+    content: "system76@Galago-UltraPro: ~";
+    color: #7fffff;
+    font-weight: bold;
+    font-size: 14px;
+
+    padding-top: 6px;
+    padding-left: 12px;
+
+    max-width: 1000px;
+    display: block;
+    height: 22px;
+
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #59574f, #3f3e3a);
+    box-shadow: 0 1px 0 #58574e inset,
+        0 2px 0 #626055 inset;
+    border-radius: 6px 6px 0 0;
+}
+
+.terminal{
+    padding: 2px;
+    font-size: 16px;
 }

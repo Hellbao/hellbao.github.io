@@ -76,7 +76,7 @@ function runTerminalLineType($line, $terminal, $target, index) {
     $target.append(message[index++]);
     return setTimeout(function () {
       runTerminalLineType($line, $terminal, $target, index);
-    }, Math.floor( Math.random() * ( $line.data('terminalTextSpeed') ? parseInt($line.data('terminalTextSpeed')) : 100 )) + 1 );
+    }, Math.floor( Math.random() * ( $line.data('terminalTextSpeed') ? parseInt($line.data('terminalTextSpeed')) : 10 )) + 1 );
   }
 
   $output.animate({ scrollTop: $output[0].scrollHeight}, 1);
