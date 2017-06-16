@@ -1,0 +1,36 @@
+@import url('demo.css');
+@import url('common.css');
+@import url('icons.css');
+
+.cd-dropdown ul {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+.cd-dropdown ul li {
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+}
+
+.cd-active.cd-dropdown > span {
+	color: #7fffff;
+}
+
+.cd-active.cd-dropdown ul li {
+	pointer-events: auto;
+}
+
+.cd-active.cd-dropdown ul li span {
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-ms-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+
+.cd-active.cd-dropdown ul li span:hover {
+	background: #7fffff;
+	color: #000;
+}
