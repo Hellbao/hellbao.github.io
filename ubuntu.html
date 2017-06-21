@@ -8,7 +8,9 @@
         <link href="plugin/cmd-ubuntu/css/terminal.css" rel="stylesheet" />
     </head>
     <body>
-        <canvas id="q" style="z-index: 0;"></canvas>
+        <div id="bgdiv" style="position: absolute;left:0%;width: 100%;height:100%;z-index: -1;">
+            <canvas id="q" style="z-index: 0;"></canvas>
+        </div>
         <div class="terminal-window" style="width:0;height:0;position: absolute;top:10%;left:55%;border-radius: 4px;border: 1px solid #7fffff;box-shadow: 0 0 25px #00fffd;">
             <div class="terminal" id="terminal" style="" data-terminal-prompt="system76@Galago-UltraPro:~$ ">
                 <span data-terminal="text" data-terminal-message='echo -e "\nVirtualize the cloud on your Galago UltraPro.\n"' data-terminal-time="0"></span>
@@ -133,9 +135,8 @@
         <script src="plugin/cmd-ubuntu/js/jquery-2.1.1.min.js"></script>
         <script src="plugin/cmd-ubuntu/js/terminal.js"></script>
         <script type="text/javascript" >
-            var s = window.screen;
-            var width = q.width = s.width;
-            var height = q.height = s.height;
+            var width = q.width = document.getElementById("bgdiv").offsetWidth;           
+            var height = q.height = document.getElementById("bgdiv").offsetHeight; 
             var letters = Array(256).join(1).split('');
             var draw = function () {
                 q.getContext('2d').fillStyle = 'rgba(0,0,0,.05)';
