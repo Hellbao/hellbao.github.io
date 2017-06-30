@@ -33,6 +33,12 @@
             <form action="" method="">	
                 <div id="fade-box">
                     <div class="terminal"></div>
+                    
+                    <!-- <div class="form">
+                        <input  type="text" name="username" id="username" placeholder="Yourname">
+                        <input type="password" placeholder="Yourtel">
+                        <button >learn More</button>
+                    </div> -->
                 </div>
             </form>
             <div class="hexagons">
@@ -139,7 +145,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $('.terminal').css('display', 'block');
-                $('.form').css('display', 'none');
+                //$('.form').css('display', 'none');
                 setTimeout(function () {
                     $('.terminal').typewriting("Welcome To My Blog ✌", {
                         "typing_interval": 200,
@@ -151,7 +157,9 @@
                     setTimeout(function () {
                         $('.terminal').rewrite("First, Please Leave Your Name And Tel", function () {
 //                            console.log("END, 2.");
-                            window.location.href="ubuntu.html"; 
+                            //$('.terminal').css('display', 'none');
+                            //$('.form').css('display', 'block');
+							window.location.href="dir.html";
                         });
                     }, 6000);
                 }, 1000);
